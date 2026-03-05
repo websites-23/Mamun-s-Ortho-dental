@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamun's ORTHO DENTAL | Dr. Md. Shamim Al Mamun & Dr. Kohinoor Sabnam</title>
+    <meta name="description"
+        content="Expert Orthodontics, Dental Implants & Cosmetic Dentistry in Lalmatia, Dhaka. Two specialist doctors serving families for years.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#004591',
+                        'navy-light': '#1a6dc9',
+                        gold: '#ea741b',
+                        'gold-light': '#f5973e',
+                        'body-bg': '#F4F7FC',
+                        'card-bg': '#FFFFFF',
+                        'text-main': '#004591',
+                        'text-muted': '#7c7c7c',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Outfit"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #F4F7FC;
+            color: #004591;
+        }
+
+        /* --- NAVBAR --- */
+        #navbar {
+            transition: box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        #navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 69, 145, 0.10);
+        }
+
+        /* Nav link underline */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ea741b;
+            border-radius: 2px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* --- HERO --- */
+        .hero-bg {
+            background: linear-gradient(135deg, #003a7a 0%, #004591 60%, #005ab5 100%);
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+
+        /* --- CARDS --- */
+        .card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            box-shadow: 0 2px 20px rgba(0, 69, 145, 0.07);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 40px rgba(0, 69, 145, 0.13);
+            transform: translateY(-4px);
+        }
+
+        /* Service icon circle */
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #e8f0fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+
+        .card:hover .service-icon {
+            background: #ea741b;
+        }
+
+        .card:hover .service-icon i {
+            color: #fff !important;
+        }
+
+        /* Gold underline accent */
+        .gold-line {
+            width: 48px;
+            height: 3px;
+            background: #ea741b;
+            border-radius: 2px;
+        }
+
+        /* --- STAT BAR --- */
+        .stat-bar {
+            background: #004591;
+        }
+
+        /* --- SECTION LABEL --- */
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 0.25em;
+            font-weight: 700;
+            color: #ea741b;
+            text-transform: uppercase;
+        }
+
+        /* --- ANIMATIONS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal.delay-100 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal.delay-200 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal.delay-300 {
+            transition-delay: 0.3s;
+        }
+
+        .reveal.delay-400 {
+            transition-delay: 0.4s;
+        }
+
+        /* --- INPUT FIELDS --- */
+        .form-input {
+            width: 100%;
+            background: #F4F7FC;
+            border: 1.5px solid #E2E8F0;
+            border-radius: 10px;
+            padding: 14px 16px;
+            font-size: 14px;
+            color: #004591;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            outline: none;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .form-input:focus {
+            border-color: #ea741b;
+            box-shadow: 0 0 0 3px rgba(234, 116, 27, 0.12);
+        }
+
+        .form-label {
+            display: block;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #7c7c7c;
+            margin-bottom: 6px;
+        }
+
+        /* --- GALLERY OVERLAY --- */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 16px;
+        }
+
+        .gallery-item img {
+            transition: transform 0.7s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        /* --- DOCTOR BADGE --- */
+        .gender-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 5px 12px;
+            border-radius: 999px;
+        }
+
+        .badge-male {
+            background: #e8f0fa;
+            color: #004591;
+        }
+
+        .badge-female {
+            background: #FDF2F8;
+            color: #9B2C5C;
+        }
+
+        /* Divider */
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #CBD5E1, transparent);
+        }
+
+        /* CTA Button */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ea741b;
+            color: #fff;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 14px 32px;
+            border-radius: 999px;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 20px rgba(234, 116, 27, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: #cf5e0e;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(234, 116, 27, 0.45);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: #fff;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 13px 32px;
+            border-radius: 999px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            border-color: #C5A059;
+            background: rgba(197, 160, 89, 0.1);
+        }
+
+        /* Mobile menu */
+        #mobile-menu {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        #mobile-menu.hidden-menu {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-12px);
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-4 group">
+                    <div
+                        class="w-11 h-11 rounded-xl bg-navy flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors duration-300">
+                        <i class="fa-solid fa-tooth text-white text-sm"></i>
+                    </div>
+                    <div class="flex flex-col leading-none">
+                        <span class="font-serif text-navy text-base font-bold tracking-wide">Mamun's <span
+                                class="text-gold italic font-medium">Ortho</span> Dental</span>
+                        <span class="text-[9px] tracking-[0.25em] text-text-muted uppercase font-semibold mt-0.5">Smile
+                            For Life</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-6 xl:gap-10">
+                    <a href="#about"
+                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">About</a>
+                    <a href="#specialists"
+                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">Doctors</a>
+                    <a href="#services"
+                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">Services</a>
+                    <a href="#gallery"
+                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">Gallery</a>
+                    <a href="#contact"
+                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">Contact</a>
+                </div>
+
+                <!-- CTA + Mobile Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="hidden md:inline-flex btn-primary text-[11px]">
+                        <i class="fa-regular fa-calendar-check text-xs"></i>
+                        Book Appointment
+                    </a>
+                    <button id="menu-btn"
+                        class="lg:hidden w-10 h-10 rounded-xl bg-body-bg flex items-center justify-center text-navy hover:bg-navy hover:text-white transition-all duration-300"
+                        aria-label="Menu">
+                        <i class="fa-solid fa-bars text-sm"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden-menu lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 px-6 py-8">
+            <div class="flex flex-col gap-6">
+                <a href="#about"
+                    class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">About
+                    <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
+                <a href="#specialists"
+                    class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Doctors
+                    <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
+                <a href="#services"
+                    class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Services
+                    <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
+                <a href="#gallery"
+                    class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Gallery
+                    <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
+                <a href="#contact"
+                    class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Contact
+                    <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
+                <a href="#contact" class="btn-primary justify-center mt-2">
+                    <i class="fa-regular fa-calendar-check text-xs"></i>
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== PREMIUM HERO ==================== -->
+    <header class="min-h-screen pt-24 pb-12 lg:pt-32 lg:pb-20 relative overflow-hidden bg-white">
+        <!-- Subtle Background Accent -->
+        <div
+            class="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-[#004591]/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none">
+        </div>
+
+        <div class="container mx-auto max-w-7xl px-6 relative z-10 h-full flex items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
+
+                <!-- Content (Left - 6 Cols) -->
+                <div class="lg:col-span-6 lg:pr-10">
+                    <div class="reveal mb-6 flex items-center gap-3">
+                        <div class="h-[1px] w-8 bg-[#ea741b]"></div>
+                        <span class="text-[#004591] text-[10px] font-bold tracking-[0.2em] uppercase">Premier Dental
+                            Care in Dhaka</span>
+                    </div>
+
+                    <h1
+                        class="reveal delay-100 font-serif text-[#004591] text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">
+                        Precision Design.<br>
+                        <span class="italic font-normal text-[#004591]/80">Exceptional</span> Smiles.
+                    </h1>
+
+                    <p
+                        class="reveal delay-200 text-[#7c7c7c] text-base md:text-lg font-light leading-relaxed mb-10 max-w-md">
+                        Led by BMDC-registered specialists, offering state-of-the-art Orthodontics, Dental Implants, and
+                        Cosmetic Dentistry in a refined, patient-focused environment.
+                    </p>
+
+                    <div class="reveal delay-300 flex flex-col sm:flex-row gap-4">
+                        <a href="#contact"
+                            class="btn-primary shadow-[0_8px_30px_rgba(234,116,27,0.25)] hover:shadow-[0_8px_30px_rgba(234,116,27,0.4)] transition-shadow">
+                            Book Consultation
+                            <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
+                        </a>
+                        <div
+                            class="flex items-center justify-center gap-3 text-sm font-medium text-[#004591] px-4 py-3 bg-[#e8f0fa] rounded-full sm:w-auto">
+                            <i class="fa-solid fa-phone text-[#ea741b]"></i>
+                            01872 36 36 36
+                        </div>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div
+                        class="reveal delay-400 mt-10 md:mt-14 pt-8 border-t border-[#004591]/10 flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 text-center sm:text-left">
+                        <div>
+                            <p class="font-serif text-3xl text-[#004591] mb-1">15<span
+                                    class="text-[#ea741b] text-xl">+</span></p>
+                            <p class="text-[9px] tracking-widest uppercase text-[#7c7c7c] font-bold">Years Obsessing
+                                <br>Over Excellence
+                            </p>
+                        </div>
+                        <div class="hidden sm:block w-px h-12 bg-[#004591]/10"></div>
+                        <div>
+                            <p class="font-serif text-3xl text-[#004591] mb-1">2k<span
+                                    class="text-[#ea741b] text-xl">+</span></p>
+                            <p class="text-[9px] tracking-widest uppercase text-[#7c7c7c] font-bold">Beautiful Smiles
+                                <br>Restored
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image (Right - 6 Cols) -->
+                <div class="lg:col-span-6 relative reveal delay-200 mt-10 lg:mt-0">
+                    <!-- Elegant Framework -->
+                    <div
+                        class="absolute -inset-4 md:-inset-6 bg-white rounded-[2.5rem] shadow-2xl shadow-[#004591]/5 -z-10 rotate-2">
+                    </div>
+                    <div class="absolute -inset-4 md:-inset-6 bg-[#004591]/5 rounded-[2.5rem] -z-20 -rotate-2"></div>
+
+                    <!-- Core Image -->
+                    <div
+                        class="relative overflow-hidden rounded-3xl aspect-[4/3] md:aspect-[4/5] lg:aspect-[3/4] shadow-xl bg-white">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
+                            alt="Premium Dental Clinic Setup"
+                            class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-1000">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#004591]/40 to-transparent"></div>
+                    </div>
+
+                    <!-- Floating Authority Badge -->
+                    <div
+                        class="absolute -bottom-6 -left-6 md:-left-12 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-[#e8f0fa] flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-award text-[#ea741b] text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-[#004591] text-sm font-bold tracking-wide">Board Certified</p>
+                            <p class="text-[#7c7c7c] text-[10px] tracking-wider uppercase mt-0.5">Dual Specialists</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== PREMIUM STATS SECTION ==================== -->
+    <section class="bg-[#004591] py-16 relative z-20 border-t-4 border-[#ea741b]">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center divide-x-0 md:divide-x md:divide-white/10">
+
+                <!-- Stat 1 -->
+                <div class="reveal flex flex-col items-center justify-center">
+                    <p class="font-serif text-[#ea741b] text-5xl md:text-6xl font-bold mb-3 drop-shadow-md">2</p>
+                    <p class="text-xs tracking-[0.2em] uppercase text-white font-semibold">Specialist Doctors</p>
+                    <p class="text-[9px] tracking-wider uppercase text-white/50 mt-1">On-Site Experts</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="reveal delay-100 flex flex-col items-center justify-center md:pl-8">
+                    <p class="font-serif text-[#ea741b] text-5xl md:text-6xl font-bold mb-3 drop-shadow-md">15<span
+                            class="text-3xl text-white ml-1 font-sans font-light">+</span></p>
+                    <p class="text-xs tracking-[0.2em] uppercase text-white font-semibold">Years of Practice</p>
+                    <p class="text-[9px] tracking-wider uppercase text-white/50 mt-1">Trusted Experience</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="reveal delay-200 flex flex-col items-center justify-center md:pl-8">
+                    <p class="font-serif text-[#ea741b] text-5xl md:text-6xl font-bold mb-3 drop-shadow-md">3</p>
+                    <p class="text-xs tracking-[0.2em] uppercase text-white font-semibold">Specialties Offered</p>
+                    <p class="text-[9px] tracking-wider uppercase text-white/50 mt-1">Comprehensive Care</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="reveal delay-300 flex flex-col items-center justify-center md:pl-8">
+                    <div
+                        class="bg-[#ea741b] text-white font-serif text-3xl md:text-4xl font-bold px-4 py-2 rounded-lg mb-4 shadow-lg transform -rotate-2">
+                        BMDC</div>
+                    <p class="text-xs tracking-[0.2em] uppercase text-white font-semibold">Registered Clinic</p>
+                    <p class="text-[9px] tracking-wider uppercase text-white/50 mt-1">Certified Standards</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PREMIUM ABOUT ==================== -->
+    <section id="about" class="py-20 md:py-32 bg-white overflow-hidden relative">
+        <!-- Background accent -->
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-[#F8FAFC] rounded-l-[100px] -z-10 hidden lg:block"></div>
+
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+
+                <!-- Left Content -->
+                <div class="lg:col-span-7 reveal">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="h-px w-10 bg-[#ea741b]"></div>
+                        <span class="text-[#004591] text-[10px] uppercase tracking-[0.2em] font-bold">About The
+                            Practice</span>
+                    </div>
+
+                    <h2 class="font-serif text-[2.5rem] md:text-5xl lg:text-6xl text-[#004591] leading-[1.1] mb-8">
+                        Excellence Built on <br>
+                        <span class="italic text-[#ea741b] font-normal">Trust & Precision</span>
+                    </h2>
+
+                    <div
+                        class="space-y-6 text-[#7c7c7c] text-base md:text-lg font-light leading-relaxed mb-10 max-w-2xl">
+                        <p>
+                            Mamun's ORTHO DENTAL is a premier orthodontics and implantology practice situated in the
+                            heart of Lalmatia, Dhaka. We have designed our clinic not just as a medical facility, but as
+                            a center for world-class patient care.
+                        </p>
+                        <p>
+                            Equipped with state-of-the-art diagnostic and surgical technology, our practice is led by
+                            dual BMDC-registered specialists who bring decades of combined academic and clinical
+                            expertise to every single treatment plan.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-y-6 gap-x-8 mb-12 border-l-2 border-[#ea741b] pl-6 py-2">
+                        <div>
+                            <p class="font-serif text-3xl text-[#004591] mb-1">Advanced</p>
+                            <p class="text-[10px] uppercase tracking-widest text-[#7c7c7c] font-bold">Implantology</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-3xl text-[#004591] mb-1">State-of-Art</p>
+                            <p class="text-[10px] uppercase tracking-widest text-[#7c7c7c] font-bold">Orthodontics</p>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn-primary shadow-lg shadow-[#ea741b]/20 px-8 py-4">
+                        Consult With Us
+                    </a>
+                </div>
+
+                <!-- Right Visual Element -->
+                <div class="lg:col-span-5 reveal delay-200 mt-12 lg:mt-0">
+                    <div class="relative">
+                        <div
+                            class="absolute -inset-4 bg-[#ea741b]/5 rounded-3xl -z-10 rotate-3 transform transition-transform duration-500 hover:rotate-6">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80"
+                            alt="Premium Clinic Interior"
+                            class="rounded-2xl w-full aspect-[4/5] object-cover shadow-[0_20px_50px_-12px_rgba(0,69,145,0.15)]">
+
+                        <!-- Floating Badge -->
+                        <div
+                            class="absolute -bottom-8 -left-8 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hidden md:flex items-center gap-5">
+                            <div class="w-14 h-14 bg-[#004591] rounded-full flex items-center justify-center">
+                                <i class="fa-solid fa-tooth text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-[#004591] font-bold text-lg leading-tight">Pain-Free</p>
+                                <p class="text-[#7c7c7c] text-[10px] uppercase tracking-widest font-semibold">Treatments
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SPECIALISTS ==================== -->
+    <section id="specialists" class="py-28 bg-body-bg">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="text-center mb-16 reveal">
+                <p class="section-label mb-4">Our Specialists</p>
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-serif text-4xl md:text-5xl text-navy">Meet the <span
+                        class="italic text-gold">Doctors</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- DR. MAMUN -->
+                <div
+                    class="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_15px_50px_-15px_rgba(0,69,145,0.08)] border border-gray-100 reveal relative overflow-hidden group">
+                    <!-- Accent background element -->
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#004591]/5 to-transparent rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+
+                    <div class="flex items-center justify-between mb-8 border-b border-gray-100 pb-8">
+                        <div>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#004591]/10 text-[#004591] text-[9px] font-bold uppercase tracking-widest mb-4">
+                                <i class="fa-solid fa-user-tie"></i> Chief Consultant
+                            </span>
+                            <h3 class="font-serif text-3xl md:text-4xl text-[#004591] mb-2 leading-tight">Dr. Md. Shamim
+                                <br><span class="italic font-medium text-[#ea741b]">Al Mamun</span>
+                            </h3>
+                            <p class="text-[#7c7c7c] text-xs font-medium tracking-widest uppercase">BDS · FCPS
+                                (Orthodontics)</p>
+                        </div>
+                        <div
+                            class="hidden sm:flex w-16 h-16 rounded-full bg-[#004591] items-center justify-center shadow-lg shadow-[#004591]/30">
+                            <i class="fa-solid fa-tooth text-white text-2xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#ea741b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-building-columns text-[#ea741b] text-[10px]"></i>
+                            </div>
+                            <p class="text-[13px] text-[#7c7c7c] leading-relaxed"><strong
+                                    class="text-[#004591] font-semibold">Associate Professor & Head</strong>, Dept. of
+                                Orthodontics, Bangladesh Dental College</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#ea741b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-hospital text-[#ea741b] text-[10px]"></i>
+                            </div>
+                            <p class="text-[13px] text-[#7c7c7c] leading-relaxed"><strong
+                                    class="text-[#004591] font-semibold">Consultant Orthodontist</strong>, Labaid
+                                Hospital, Dhanmondi</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#ea741b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-tooth text-[#ea741b] text-[10px]"></i>
+                            </div>
+                            <p class="text-[13px] text-[#7c7c7c] leading-relaxed"><strong
+                                    class="text-[#004591] font-semibold">Specialized Expertise in Implantology</strong>
+                                and advanced restorative treatments</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 divide-x divide-gray-200 bg-[#F8FAFC] rounded-2xl p-4">
+                        <div class="text-center">
+                            <p class="font-serif text-lg font-bold text-[#004591]">FCPS</p>
+                            <p class="text-[8px] tracking-[0.2em] uppercase text-[#7c7c7c] font-bold mt-1">Degree</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-serif text-lg font-bold text-[#004591]">2133</p>
+                            <p class="text-[8px] tracking-[0.2em] uppercase text-[#7c7c7c] font-bold mt-1">BMDC Reg.</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-serif text-lg font-bold text-[#004591]">Labaid</p>
+                            <p class="text-[8px] tracking-[0.2em] uppercase text-[#7c7c7c] font-bold mt-1">Consultant
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DR. KOHINOOR -->
+                <div
+                    class="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_15px_50px_-15px_rgba(0,69,145,0.08)] border border-gray-100 reveal delay-200 relative overflow-hidden group">
+                    <!-- Accent background element -->
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#ea741b]/10 to-transparent rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500">
+                    </div>
+
+                    <div class="flex items-center justify-between mb-8 border-b border-gray-100 pb-8">
+                        <div>
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ea741b]/10 text-[#ea741b] text-[9px] font-bold uppercase tracking-widest mb-4">
+                                <i class="fa-solid fa-stethoscope"></i> Senior Consultant
+                            </span>
+                            <h3 class="font-serif text-3xl md:text-4xl text-[#004591] mb-2 leading-tight">Dr. Kohinoor
+                                <br><span class="italic font-medium text-[#ea741b]">Sabnam</span>
+                            </h3>
+                            <p class="text-[#7c7c7c] text-xs font-medium tracking-widest uppercase">BDS · MSc
+                                (Microbiology)</p>
+                        </div>
+                        <div
+                            class="hidden sm:flex w-16 h-16 rounded-full bg-[#ea741b] items-center justify-center shadow-lg shadow-[#ea741b]/30">
+                            <i class="fa-solid fa-microscope text-white text-2xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#ea741b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-hand-holding-medical text-[#ea741b] text-[10px]"></i>
+                            </div>
+                            <p class="text-[13px] text-[#7c7c7c] leading-relaxed"><strong
+                                    class="text-[#004591] font-semibold">Dental Surgeon</strong> with advanced expertise
+                                in general and cosmetic dentistry</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#ea741b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-microscope text-[#ea741b] text-[10px]"></i>
+                            </div>
+                            <p class="text-[13px] text-[#7c7c7c] leading-relaxed"><strong
+                                    class="text-[#004591] font-semibold">MSc in Microbiology</strong>, providing deep
+                                clinical knowledge in oral hygiene</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-[#ea741b]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fa-solid fa-children text-[#ea741b] text-[10px]"></i>
+                            </div>
+                            <p class="text-[13px] text-[#7c7c7c] leading-relaxed"><strong
+                                    class="text-[#004591] font-semibold">Pediatric & Female Care</strong> — dedicated,
+                                specialized care for women and children</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 divide-x divide-gray-200 bg-[#F8FAFC] rounded-2xl p-4">
+                        <div class="text-center">
+                            <p class="font-serif text-lg font-bold text-[#ea741b]">BDS</p>
+                            <p class="text-[8px] tracking-[0.2em] uppercase text-[#7c7c7c] font-bold mt-1">Degree</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-serif text-lg font-bold text-[#ea741b]">4152</p>
+                            <p class="text-[8px] tracking-[0.2em] uppercase text-[#7c7c7c] font-bold mt-1">BMDC Reg.</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-serif text-lg font-bold text-[#ea741b]">MSc</p>
+                            <p class="text-[8px] tracking-[0.2em] uppercase text-[#7c7c7c] font-bold mt-1">Microbiology
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="text-center mb-16 reveal">
+                <p class="section-label mb-4">What We Offer</p>
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-serif text-4xl md:text-5xl text-navy">Our <span class="italic text-gold">Services</span>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <!-- S1: Orthodontics -->
+                <div
+                    class="bg-white rounded-[2rem] p-10 border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] reveal group hover:shadow-[0_20px_50px_-20px_rgba(234,116,27,0.15)] transition-all duration-500 hover:-translate-y-2 border-b-4 border-b-transparent hover:border-b-[#ea741b]">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-[#004591]/5 flex items-center justify-center mb-8 group-hover:bg-[#004591] transition-colors duration-500">
+                        <i class="fa-solid fa-teeth-open text-[#004591] text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl text-[#004591] mb-4 group-hover:text-[#ea741b] transition-colors">
+                        Orthodontics</h4>
+                    <p class="text-[#7c7c7c] text-sm font-light leading-relaxed mb-8">
+                        Precision braces and clear aligner systems designed to create perfectly articulated, healthy
+                        smiles for all ages.
+                    </p>
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ea741b] hover:text-[#004591] transition-colors">
+                        Book Assessment <i class="fa-solid fa-arrow-right-long text-[8px]"></i>
+                    </a>
+                </div>
+
+                <!-- S2: Dental Implants -->
+                <div
+                    class="bg-white rounded-[2rem] p-10 border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] reveal delay-100 group hover:shadow-[0_20px_50px_-20px_rgba(0,69,145,0.15)] transition-all duration-500 hover:-translate-y-2 border-b-4 border-b-transparent hover:border-b-[#004591]">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-[#ea741b]/5 flex items-center justify-center mb-8 group-hover:bg-[#ea741b] transition-colors duration-500">
+                        <i class="fa-solid fa-tooth text-[#ea741b] text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl text-[#004591] mb-4 group-hover:text-[#ea741b] transition-colors">
+                        Dental Implants</h4>
+                    <p class="text-[#7c7c7c] text-sm font-light leading-relaxed mb-8">
+                        Advanced surgical implantology providing permanent, natural-feeling solutions for missing teeth
+                        with world-class precision.
+                    </p>
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#004591] hover:text-[#ea741b] transition-colors">
+                        Explore Options <i class="fa-solid fa-arrow-right-long text-[8px]"></i>
+                    </a>
+                </div>
+
+                <!-- S3: Cosmetic Dentistry -->
+                <div
+                    class="bg-white rounded-[2rem] p-10 border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] reveal delay-200 group hover:shadow-[0_20px_50px_-20px_rgba(234,116,27,0.15)] transition-all duration-500 hover:-translate-y-2 border-b-4 border-b-transparent hover:border-b-[#ea741b]">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-[#004591]/5 flex items-center justify-center mb-8 group-hover:bg-[#004591] transition-colors duration-500">
+                        <i class="fa-solid fa-wand-magic-sparkles text-[#004591] text-2xl group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-serif text-2xl text-[#004591] mb-4 group-hover:text-[#ea741b] transition-colors">
+                        Cosmetic Dental</h4>
+                    <p class="text-[#7c7c7c] text-sm font-light leading-relaxed mb-8">
+                        Bespoke smile makeovers including veneers and professional whitening to enhance your natural
+                        beauty.
+                    </p>
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ea741b] hover:text-[#004591] transition-colors">
+                        Begin Journey <i class="fa-solid fa-arrow-right-long text-[8px]"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
+    <section id="gallery" class="py-28 bg-body-bg">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="text-center mb-16 reveal">
+                <p class="section-label mb-4">Photo Gallery</p>
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-serif text-4xl md:text-5xl text-navy">Our Clinic &amp; <span
+                        class="italic text-gold">Work</span></h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 h-[600px] md:h-[700px]">
+
+                <!-- Main Facility -->
+                <div class="gallery-item col-span-2 row-span-2 reveal group relative overflow-hidden rounded-[2rem]">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
+                        alt="Advanced Dental Facility"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#004591]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <p class="text-white text-xs tracking-widest uppercase font-bold mb-2">Modern Infrastructure</p>
+                        <h5 class="text-white font-serif text-2xl italic">Advanced Surgical Facility</h5>
+                    </div>
+                </div>
+
+                <!-- Equipment -->
+                <div
+                    class="gallery-item col-span-1 row-span-1 reveal delay-100 group relative overflow-hidden rounded-[2rem]">
+                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80"
+                        alt="State-of-the-Art Gear"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <i class="fa-solid fa-microscope text-white text-3xl"></i>
+                    </div>
+                </div>
+
+                <!-- Detail -->
+                <div
+                    class="gallery-item col-span-1 row-span-1 reveal delay-200 group relative overflow-hidden rounded-[2rem]">
+                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80"
+                        alt="Technical Detail"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <i class="fa-solid fa-tooth text-white text-3xl"></i>
+                    </div>
+                </div>
+
+                <!-- Wide Landscape Detail -->
+                <div
+                    class="gallery-item col-span-2 row-span-1 reveal delay-300 group relative overflow-hidden rounded-[2rem]">
+                    <img src="https://images.unsplash.com/photo-1609357912448-f8650c82245b?auto=format&fit=crop&w=1200&q=80"
+                        alt="Patient Care Detail"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-[#ea741b]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center p-8">
+                        <h5 class="text-white font-serif text-xl">Patient Comfort Prioritized</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SMART LOGIC CONTACT PORTAL ==================== -->
+    <section id="contact" class="py-24 md:py-32 bg-[#F8FAFC] relative overflow-hidden">
+        <!-- Structural Background Accents -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-[#004591]/[0.02] -skew-x-12 translate-x-1/4"></div>
+            <div class="absolute bottom-0 left-0 w-1/4 h-1/2 bg-[#ea741b]/[0.02] rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="container mx-auto max-w-7xl px-6 relative z-10">
+            <!-- Section Header -->
+            <div class="mb-20 reveal">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-10 h-[2px] bg-[#ea741b]"></span>
+                    <span class="text-[#004591] text-[10px] uppercase tracking-[0.3em] font-bold">Clinical Information
+                        Console</span>
+                </div>
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                    <h2 class="font-serif text-5xl md:text-6xl text-[#004591] leading-tight">
+                        Ready to Elevate <br>
+                        <span class="italic font-normal text-[#ea741b]">Your Smile?</span>
+                    </h2>
+                    <div
+                        class="flex items-center gap-4 bg-white px-6 py-3 rounded-2xl shadow-sm border border-gray-100">
+                        <span class="relative flex h-3 w-3">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        </span>
+                        <div class="text-left">
+                            <p class="text-[9px] uppercase tracking-widest font-black text-[#004591]">Clinic Status</p>
+                            <p class="text-[#7c7c7c] text-[10px] font-medium">Currently Accepting Inquiries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Left: Information Hub -->
+                <div class="lg:col-span-4 space-y-6 reveal delay-100">
+                    <!-- Address Card -->
+                    <div
+                        class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-start gap-5">
+                            <div class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-map-pin text-[#004591] text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-[#004591] font-bold text-xs uppercase tracking-widest mb-2">Location
+                                </h4>
+                                <p class="text-[#7c7c7c] text-sm font-light leading-relaxed">
+                                    5/4 (2nd Floor), Block A<br>Lalmatia, Dhaka-1207
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hours Card -->
+                    <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
+                        <div class="flex items-start gap-5">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-clock text-[#ea741b] text-lg"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-[#004591] font-bold text-xs uppercase tracking-widest mb-4">Availability
+                                </h4>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between items-center text-xs">
+                                        <span class="text-[#7c7c7c]">Sat — Thu</span>
+                                        <span class="text-[#004591] font-bold">4PM — 9PM</span>
+                                    </div>
+                                    <div class="flex justify-between items-center text-xs pb-1 border-b border-gray-50">
+                                        <span class="text-[#7c7c7c]">Friday</span>
+                                        <span class="text-[#ea741b] font-bold italic">By Appointment</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Connectivity Card -->
+                    <div class="bg-[#004591] p-8 rounded-3xl shadow-xl shadow-[#004591]/10">
+                        <div class="flex items-start gap-5">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+                                <i class="fa-solid fa-headset text-white text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white/60 font-bold text-xs uppercase tracking-widest mb-4">Connectivity
+                                </h4>
+                                <p class="text-white text-base font-medium mb-1">01872 363 636</p>
+                                <p class="text-white/60 text-[10px] italic">clinical@mamundental.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Smart Request Surface -->
+                <div class="lg:col-span-8 reveal delay-200">
+                    <div
+                        class="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.05)] border border-gray-100 relative overflow-hidden">
+                        <!-- Form Accent Glow -->
+                        <div class="absolute -top-12 -right-12 w-40 h-40 bg-[#ea741b]/5 rounded-full blur-3xl"></div>
+
+                        <div class="mb-12">
+                            <h3 class="font-serif text-3xl text-[#004591] mb-2 font-normal italic">Consultation Request
+                            </h3>
+                            <p class="text-[#7c7c7c] text-sm font-light">Accurate digital submission ensures priority
+                                clinical assessment.</p>
+                        </div>
+
+                        <form class="space-y-10">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <!-- Name -->
+                                <div class="group">
+                                    <label
+                                        class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Patient
+                                        Full Name</label>
+                                    <input type="text" placeholder="e.g. John Doe" required
+                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b]">
+                                </div>
+                                <!-- Phone -->
+                                <div class="group">
+                                    <label
+                                        class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Mobile
+                                        Access</label>
+                                    <input type="tel" placeholder="+880 1XXX XXXXXX" required
+                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b]">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <!-- Email (Optional) -->
+                                <div class="group">
+                                    <label
+                                        class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Email
+                                        Address <span class="italic lowercase opacity-60">(Optional)</span></label>
+                                    <input type="email" placeholder="exaple@gmail.com"
+                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b]">
+                                </div>
+                                <!-- Specialist -->
+                                <div class="group">
+                                    <label
+                                        class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Preferred
+                                        Specialist</label>
+                                    <select required
+                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b] cursor-pointer appearance-none text-[#004591]">
+                                        <option value="" disabled selected>Preferred Specialist</option>
+                                        <option>Dr. Md. Shamim Al Mamun (Orthodontics)</option>
+                                        <option>Dr. Kohinoor Sabnam (Pediatric & Social)</option>
+                                        <option>General Oral Wellness</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="group">
+                                <label
+                                    class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Case
+                                    Summary / Message</label>
+                                <textarea rows="4" placeholder="Briefly describe your clinical concern..." required
+                                    class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b] resize-none"></textarea>
+                            </div>
+
+                            <div class="flex flex-col md:flex-row items-center gap-8 pt-4">
+                                <button type="submit"
+                                    class="w-full md:w-2/3 bg-[#004591] text-white font-bold py-5 rounded-2xl hover:bg-[#ea741b] transition-all duration-500 shadow-xl shadow-[#004591]/20 flex items-center justify-center gap-4 group uppercase tracking-[0.3em] text-[10px]">
+                                    Initialize Inquiry
+                                    <i
+                                        class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-3"></i>
+                                </button>
+                                <div
+                                    class="flex items-center gap-3 opacity-40 grayscale hover:grayscale-0 transition-all cursor-default">
+                                    <i class="fa-solid fa-shield-halved text-[#004591] text-xl"></i>
+                                    <span class="text-[9px] font-bold uppercase tracking-widest leading-tight">Clinical
+                                        Data<br>ConfidentialITY</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-[#000F21] py-20 border-t border-white/5">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8 items-center">
+
+                <!-- Brand & Motto -->
+                <div class="md:col-span-4 flex flex-col items-center md:items-start text-center md:text-left">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-[#004591] flex items-center justify-center shadow-lg shadow-[#004591]/20">
+                            <i class="fa-solid fa-tooth text-[#ea741b] text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="font-serif text-2xl text-white">Mamun's <span
+                                    class="text-[#ea741b] italic font-medium">Ortho</span></span>
+                            <p class="text-[9px] tracking-[0.4em] text-white/40 uppercase font-bold">Smile For Life</p>
+                        </div>
+                    </div>
+                    <p class="text-white/50 text-xs font-light leading-relaxed max-w-xs">
+                        Lalmatia's premier center for advanced orthodontics and precision implantology. Excellence in
+                        dental care since 2008.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="md:col-span-4">
+                    <div
+                        class="flex flex-wrap justify-center gap-x-10 gap-y-4 text-[10px] tracking-[0.2em] text-white/50 uppercase font-bold">
+                        <a href="#about" class="hover:text-[#ea741b] transition-colors">History</a>
+                        <a href="#specialists" class="hover:text-[#ea741b] transition-colors">Specialists</a>
+                        <a href="#services" class="hover:text-[#ea741b] transition-colors">Services</a>
+                        <a href="#contact" class="hover:text-[#ea741b] transition-colors">Appointment</a>
+                    </div>
+                </div>
+
+                <!-- Social & Rights -->
+                <div class="md:col-span-4 flex flex-col items-center md:items-end">
+                    <div class="flex gap-6 mb-8">
+                        <a href="https://facebook.com/mamundental" target="_blank"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-[#ea741b] hover:text-white transition-all">
+                            <i class="fa-brands fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-[#ea741b] hover:text-white transition-all">
+                            <i class="fa-brands fa-instagram text-sm"></i>
+                        </a>
+                    </div>
+                    <p class="text-white/30 text-[9px] tracking-widest uppercase font-bold text-center md:text-right">
+                        © 2025 Mamun's ORTHO DENTAL. <br>
+                        <span class="text-white/10 mt-1 block tracking-normal normal-case italic">Crafting confident
+                            smiles with absolute precision.</span>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        // --- NAVBAR: scroll shadow + hide/show ---
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const cur = window.pageYOffset;
+            if (cur > 10) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = cur;
+        });
+
+        // --- MOBILE MENU ---
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('hidden-menu');
+                menuBtn.innerHTML = '<i class="fa-solid fa-xmark text-sm"></i>';
+            } else {
+                mobileMenu.classList.add('hidden-menu');
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars text-sm"></i>';
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden-menu');
+                menuBtn.innerHTML = '<i class="fa-solid fa-bars text-sm"></i>';
+                menuOpen = false;
+            });
+        });
+
+        // --- SCROLL REVEAL ---
+        const revealEls = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.08 });
+        revealEls.forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
