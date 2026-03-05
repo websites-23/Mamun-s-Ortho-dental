@@ -328,24 +328,32 @@
                 </a>
 
                 <!-- Desktop Nav -->
-                <div class="hidden lg:flex items-center gap-6 xl:gap-10">
+                <div class="hidden lg:flex items-center gap-4 xl:gap-6">
+                    <a href="#"
+                        class="nav-link text-[10px] font-semibold tracking-[0.15em] text-text-muted hover:text-navy uppercase">Home</a>
                     <a href="#about"
-                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">About</a>
+                        class="nav-link text-[10px] font-semibold tracking-[0.15em] text-text-muted hover:text-navy uppercase">About
+                        Clinic</a>
                     <a href="#specialists"
-                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">Doctors</a>
+                        class="nav-link text-[10px] font-semibold tracking-[0.15em] text-text-muted hover:text-navy uppercase">Doctors</a>
                     <a href="#services"
-                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">Services</a>
+                        class="nav-link text-[10px] font-semibold tracking-[0.15em] text-text-muted hover:text-navy uppercase">Services</a>
+                    <a href="#portal"
+                        class="nav-link text-[10px] font-semibold tracking-[0.15em] text-text-muted hover:text-navy uppercase">Patient
+                        Portal</a>
                     <a href="#gallery"
-                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">Gallery</a>
+                        class="nav-link text-[10px] font-semibold tracking-[0.15em] text-text-muted hover:text-navy uppercase">Gallery</a>
+                    <a href="#blog"
+                        class="nav-link text-[10px] font-semibold tracking-[0.15em] text-text-muted hover:text-navy uppercase">Blog</a>
                     <a href="#contact"
-                        class="nav-link text-[11px] font-semibold tracking-[0.2em] text-text-muted hover:text-navy uppercase">Contact</a>
+                        class="nav-link text-[10px] font-semibold tracking-[0.15em] text-text-muted hover:text-navy uppercase">Contact</a>
                 </div>
 
                 <!-- CTA + Mobile Toggle -->
                 <div class="flex items-center gap-4">
-                    <a href="#contact" class="hidden md:inline-flex btn-primary text-[11px]">
+                    <a href="#contact" class="hidden md:inline-flex btn-primary text-[11px] px-6">
                         <i class="fa-regular fa-calendar-check text-xs"></i>
-                        Book Appointment
+                        Appointment Booking
                     </a>
                     <button id="menu-btn"
                         class="lg:hidden w-10 h-10 rounded-xl bg-body-bg flex items-center justify-center text-navy hover:bg-navy hover:text-white transition-all duration-300"
@@ -358,10 +366,14 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden-menu lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 px-6 py-8">
-            <div class="flex flex-col gap-6">
+            class="hidden-menu lg:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 px-6 py-6 max-h-[85vh] overflow-y-auto">
+            <div class="flex flex-col gap-5">
+                <a href="#"
+                    class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Home
+                    <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
                 <a href="#about"
                     class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">About
+                    Clinic
                     <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
                 <a href="#specialists"
                     class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Doctors
@@ -369,15 +381,22 @@
                 <a href="#services"
                     class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Services
                     <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
+                <a href="#portal"
+                    class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Patient
+                    Portal
+                    <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
                 <a href="#gallery"
                     class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Gallery
+                    <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
+                <a href="#blog"
+                    class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Blog
                     <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
                 <a href="#contact"
                     class="mobile-link text-sm font-semibold text-navy tracking-wide uppercase flex items-center justify-between">Contact
                     <i class="fa-solid fa-chevron-right text-gold text-xs"></i></a>
                 <a href="#contact" class="btn-primary justify-center mt-2">
                     <i class="fa-regular fa-calendar-check text-xs"></i>
-                    Book Appointment
+                    Appointment Booking
                 </a>
             </div>
         </div>
@@ -898,6 +917,169 @@
         </div>
     </section>
 
+    <!-- ==================== PATIENT PORTAL ==================== -->
+    <section id="portal" class="py-20 md:py-28 bg-white border-t border-gray-100">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <p class="section-label mb-4">Patient Portal</p>
+                    <div class="gold-line mb-6"></div>
+                    <h2 class="font-serif text-4xl md:text-5xl text-navy mb-6">Manage Your <span
+                            class="italic text-gold">Smile Journey</span></h2>
+                    <p class="text-[#7c7c7c] text-base md:text-lg font-light leading-relaxed mb-8">
+                        Access your treatment plans, view upcoming appointments, and review clinical notes from the
+                        comfort of your home. Our secure digital portal keeps you connected to your care team 24/7.
+                    </p>
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-check text-gold"></i>
+                            <span class="text-navy font-medium text-sm">Review Treatment Progress</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-check text-gold"></i>
+                            <span class="text-navy font-medium text-sm">Direct Messaging with Doctors</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-check text-gold"></i>
+                            <span class="text-navy font-medium text-sm">Access Medical Records & Invoices</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#" class="btn-primary justify-center shadow-lg shadow-[#ea741b]/20 px-8 py-4">
+                            Login To Portal
+                        </a>
+                        <a href="#"
+                            class="btn-outline text-navy border-navy/20 hover:border-navy hover:bg-navy/5 justify-center px-8 py-4">
+                            Register Account
+                        </a>
+                    </div>
+                </div>
+                <div class="reveal delay-200 relative mt-10 lg:mt-0">
+                    <div class="absolute -inset-4 bg-[#004591]/5 rounded-[2.5rem] -z-10 rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                        alt="Patient Portal Device"
+                        class="rounded-3xl w-full aspect-square md:aspect-[4/3] object-cover shadow-2xl bg-white p-2">
+                    <div
+                        class="absolute -bottom-6 -left-6 md:-left-12 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-green-50 flex items-center justify-center">
+                            <i class="fa-solid fa-lock text-green-500 text-lg"></i>
+                        </div>
+                        <div>
+                            <p class="text-navy font-bold text-sm">Bank-Grade Security</p>
+                            <p class="text-[#7c7c7c] text-[10px] uppercase tracking-widest font-semibold mt-0.5">HIPAA
+                                Compliant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== BLOG ==================== -->
+    <section id="blog" class="py-20 md:py-28 bg-[#F4F7FC]">
+        <div class="container mx-auto max-w-7xl px-6">
+            <div class="text-center mb-16 reveal">
+                <p class="section-label mb-4">Latest Insights</p>
+                <div class="gold-line mx-auto mb-6"></div>
+                <h2 class="font-serif text-4xl md:text-5xl text-navy">Clinical <span
+                        class="italic text-gold">Journal</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <a href="#"
+                    class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] reveal group hover:shadow-[0_20px_50px_-20px_rgba(0,69,145,0.15)] transition-all duration-500 hover:-translate-y-2 block">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1598256989800-fea5fb20b615?auto=format&fit=crop&w=600&q=80"
+                            alt="Blog Image"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-[#004591] font-bold">
+                            Orthodontics</div>
+                    </div>
+                    <div class="p-8">
+                        <div
+                            class="flex items-center gap-3 text-[10px] text-[#7c7c7c] mb-4 uppercase tracking-widest font-semibold">
+                            <span><i class="fa-regular fa-calendar mr-1"></i> Oct 12, 2025</span>
+                            <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                            <span>5 Min Read</span>
+                        </div>
+                        <h4
+                            class="font-serif text-xl text-[#004591] mb-3 group-hover:text-[#ea741b] transition-colors leading-snug">
+                            The Evolution of Invisible Aligners</h4>
+                        <p class="text-[#7c7c7c] text-sm font-light leading-relaxed line-clamp-3">
+                            Discover how modern clear aligner technology is transforming smiles seamlessly without the
+                            visibility of traditional metal braces.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Blog Post 2 -->
+                <a href="#"
+                    class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] reveal delay-100 group hover:shadow-[0_20px_50px_-20px_rgba(0,69,145,0.15)] transition-all duration-500 hover:-translate-y-2 block">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80"
+                            alt="Blog Image"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-[#004591] font-bold">
+                            Implants</div>
+                    </div>
+                    <div class="p-8">
+                        <div
+                            class="flex items-center gap-3 text-[10px] text-[#7c7c7c] mb-4 uppercase tracking-widest font-semibold">
+                            <span><i class="fa-regular fa-calendar mr-1"></i> Sep 28, 2025</span>
+                            <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                            <span>8 Min Read</span>
+                        </div>
+                        <h4
+                            class="font-serif text-xl text-[#004591] mb-3 group-hover:text-[#ea741b] transition-colors leading-snug">
+                            Dental Implant Procedure Explained</h4>
+                        <p class="text-[#7c7c7c] text-sm font-light leading-relaxed line-clamp-3">
+                            A comprehensive guide to what you can expect before, during, and after your specialized
+                            dental implant integration procedure.
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Blog Post 3 -->
+                <a href="#"
+                    class="bg-white rounded-[2rem] overflow-hidden border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] reveal delay-200 group hover:shadow-[0_20px_50px_-20px_rgba(0,69,145,0.15)] transition-all duration-500 hover:-translate-y-2 block">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80"
+                            alt="Blog Image"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-[#004591] font-bold">
+                            Wellness</div>
+                    </div>
+                    <div class="p-8">
+                        <div
+                            class="flex items-center gap-3 text-[10px] text-[#7c7c7c] mb-4 uppercase tracking-widest font-semibold">
+                            <span><i class="fa-regular fa-calendar mr-1"></i> Sep 15, 2025</span>
+                            <span class="w-1 h-1 rounded-full bg-gray-300"></span>
+                            <span>4 Min Read</span>
+                        </div>
+                        <h4
+                            class="font-serif text-xl text-[#004591] mb-3 group-hover:text-[#ea741b] transition-colors leading-snug">
+                            Habits to Protect Cosmetic Work</h4>
+                        <p class="text-[#7c7c7c] text-sm font-light leading-relaxed line-clamp-3">
+                            Simple lifestyle adjustments and dietary choices that can significantly extend the longevity
+                            of your cosmetic treatments.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center mt-12 reveal delay-300">
+                <a href="#"
+                    class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#004591] hover:text-[#ea741b] transition-colors">
+                    View All Articles <i class="fa-solid fa-arrow-right-long text-[8px]"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== SMART LOGIC CONTACT PORTAL ==================== -->
     <section id="contact" class="py-24 md:py-32 bg-[#F8FAFC] relative overflow-hidden">
         <!-- Structural Background Accents -->
@@ -1002,78 +1184,138 @@
                         <!-- Form Accent Glow -->
                         <div class="absolute -top-12 -right-12 w-40 h-40 bg-[#ea741b]/5 rounded-full blur-3xl"></div>
 
-                        <div class="mb-12">
-                            <h3 class="font-serif text-3xl text-[#004591] mb-2 font-normal italic">Consultation Request
-                            </h3>
-                            <p class="text-[#7c7c7c] text-sm font-light">Accurate digital submission ensures priority
-                                clinical assessment.</p>
+                        <div class="mb-10">
+                            <h3 class="font-serif text-3xl text-[#004591] mb-2 font-normal italic">Smart Appointment
+                                System</h3>
+                            <p class="text-[#7c7c7c] text-sm font-light">Select your preferred doctor and find the next
+                                available time slot.</p>
                         </div>
 
-                        <form class="space-y-10">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                                <!-- Name -->
-                                <div class="group">
-                                    <label
-                                        class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Patient
-                                        Full Name</label>
-                                    <input type="text" placeholder="e.g. John Doe" required
-                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b]">
-                                </div>
-                                <!-- Phone -->
-                                <div class="group">
-                                    <label
-                                        class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Mobile
-                                        Access</label>
-                                    <input type="tel" placeholder="+880 1XXX XXXXXX" required
-                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b]">
-                                </div>
+                        <!-- Success Message (Hidden by Default) -->
+                        <div id="booking-success" class="hidden text-center py-10">
+                            <div
+                                class="w-20 h-20 rounded-full bg-green-50 mx-auto flex items-center justify-center mb-6">
+                                <i class="fa-solid fa-check text-green-500 text-4xl"></i>
                             </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                                <!-- Email (Optional) -->
-                                <div class="group">
-                                    <label
-                                        class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Email
-                                        Address <span class="italic lowercase opacity-60">(Optional)</span></label>
-                                    <input type="email" placeholder="exaple@gmail.com"
-                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b]">
-                                </div>
-                                <!-- Specialist -->
-                                <div class="group">
-                                    <label
-                                        class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Preferred
-                                        Specialist</label>
-                                    <select required
-                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b] cursor-pointer appearance-none text-[#004591]">
-                                        <option value="" disabled selected>Preferred Specialist</option>
-                                        <option>Dr. Md. Shamim Al Mamun (Orthodontics)</option>
-                                        <option>Dr. Kohinoor Sabnam (Pediatric & Social)</option>
-                                        <option>General Oral Wellness</option>
-                                    </select>
-                                </div>
+                            <h3 class="font-serif text-3xl text-[#004591] mb-4">Booking Confirmed!</h3>
+                            <p class="text-[#7c7c7c] text-base mb-6">Your appointment request has been received.</p>
+                            <div
+                                class="inline-flex items-center gap-3 bg-[#F8FAFC] px-6 py-4 rounded-xl border border-gray-100">
+                                <i class="fa-brands fa-whatsapp text-green-600 text-xl"></i>
+                                <span class="text-sm font-medium text-[#004591]">Automatic WhatsApp & SMS reminder
+                                    scheduled.</span>
                             </div>
+                            <button type="button"
+                                onclick="document.getElementById('booking-success').classList.add('hidden'); document.getElementById('booking-form').classList.remove('hidden'); document.getElementById('booking-form').reset(); resetSlots();"
+                                class="block mx-auto mt-10 text-[10px] font-bold uppercase tracking-widest text-[#ea741b] hover:text-[#004591] transition-colors">Book
+                                Another</button>
+                        </div>
 
-                            <!-- Message -->
-                            <div class="group">
+                        <form id="booking-form" class="space-y-10">
+                            <!-- Step 1: Doctor -->
+                            <div>
                                 <label
-                                    class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Case
-                                    Summary / Message</label>
-                                <textarea rows="4" placeholder="Briefly describe your clinical concern..." required
-                                    class="w-full bg-[#F8FAFC] border-none rounded-xl px-2 py-4 text-sm focus:ring-0 transition-all outline-none border-b-2 border-transparent focus:border-[#ea741b] resize-none"></textarea>
+                                    class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Step
+                                    1: Select Specialist</label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="doctor" value="male" class="peer sr-only" required
+                                            onchange="generateSlots()">
+                                        <div
+                                            class="rounded-xl border-2 border-transparent bg-[#F8FAFC] p-4 peer-checked:border-[#ea741b] peer-checked:bg-white hover:bg-gray-50 transition-all">
+                                            <div class="flex items-center gap-4">
+                                                <div
+                                                    class="w-10 h-10 rounded-full bg-[#004591]/10 flex items-center justify-center flex-shrink-0">
+                                                    <i class="fa-solid fa-user-doctor text-[#004591]"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="text-sm font-bold text-[#004591]">Dr. Md. Shamim Al Mamun
+                                                    </p>
+                                                    <p class="text-[10px] uppercase tracking-widest text-[#7c7c7c]">
+                                                        Orthodontics (Male)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="cursor-pointer">
+                                        <input type="radio" name="doctor" value="female" class="peer sr-only"
+                                            onchange="generateSlots()">
+                                        <div
+                                            class="rounded-xl border-2 border-transparent bg-[#F8FAFC] p-4 peer-checked:border-[#ea741b] peer-checked:bg-white hover:bg-gray-50 transition-all">
+                                            <div class="flex items-center gap-4">
+                                                <div
+                                                    class="w-10 h-10 rounded-full bg-[#ea741b]/10 flex items-center justify-center flex-shrink-0">
+                                                    <i class="fa-solid fa-user-nurse text-[#ea741b]"></i>
+                                                </div>
+                                                <div>
+                                                    <p class="text-sm font-bold text-[#004591]">Dr. Kohinoor Sabnam</p>
+                                                    <p class="text-[10px] uppercase tracking-widest text-[#7c7c7c]">
+                                                        General/Pediatric (Female)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Time Slot -->
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <label
+                                        class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black opacity-40">Step
+                                        2: Date & Time</label>
+                                    <button type="button" onclick="selectNextAvailable()"
+                                        class="text-[9px] font-bold text-[#ea741b] hover:underline uppercase tracking-widest"><i
+                                            class="fa-solid fa-bolt mr-1"></i> Auto-Select Next Available</button>
+                                </div>
+                                <div class="bg-[#F8FAFC] rounded-xl p-6">
+                                    <input type="date" id="booking-date"
+                                        class="w-full bg-white border-none rounded-lg px-4 py-3 text-sm focus:ring-0 outline-none text-[#004591] mb-6 shadow-sm cursor-pointer"
+                                        onchange="generateSlots()" required>
+
+                                    <div id="slots-container" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                        <!-- Slots generated by JS -->
+                                        <p class="col-span-full text-center text-xs text-[#7c7c7c] py-4 italic">Please
+                                            select a doctor and date first.</p>
+                                    </div>
+                                    <input type="hidden" id="selected-slot" required>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Patient Info -->
+                            <div>
+                                <label
+                                    class="text-[9px] uppercase tracking-[0.3em] text-[#004591] font-black mb-4 block opacity-40">Step
+                                    3: Patient Details</label>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                    <input type="text" placeholder="Full Name" required
+                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-4 py-4 text-sm focus:ring-0 outline-none border-b-2 border-transparent focus:border-[#ea741b]">
+                                    <input type="tel" placeholder="Phone Number" required
+                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-4 py-4 text-sm focus:ring-0 outline-none border-b-2 border-transparent focus:border-[#ea741b]">
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 mb-6">
+                                    <input type="number" placeholder="Age" required min="1" max="120"
+                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-4 py-4 text-sm focus:ring-0 outline-none border-b-2 border-transparent focus:border-[#ea741b]">
+                                    <input type="text" placeholder="Brief Description of Problem" required
+                                        class="w-full bg-[#F8FAFC] border-none rounded-xl px-4 py-4 text-sm focus:ring-0 outline-none border-b-2 border-transparent focus:border-[#ea741b]">
+                                </div>
                             </div>
 
                             <div class="flex flex-col md:flex-row items-center gap-8 pt-4">
-                                <button type="submit"
+                                <button type="submit" id="submit-btn"
                                     class="w-full md:w-2/3 bg-[#004591] text-white font-bold py-5 rounded-2xl hover:bg-[#ea741b] transition-all duration-500 shadow-xl shadow-[#004591]/20 flex items-center justify-center gap-4 group uppercase tracking-[0.3em] text-[10px]">
-                                    Initialize Inquiry
+                                    Confirm Booking
                                     <i
                                         class="fa-solid fa-arrow-right-long transition-transform group-hover:translate-x-3"></i>
                                 </button>
                                 <div
-                                    class="flex items-center gap-3 opacity-40 grayscale hover:grayscale-0 transition-all cursor-default">
+                                    class="flex items-center gap-3 opacity-40 grayscale hover:grayscale-0 transition-all cursor-default relative group">
                                     <i class="fa-solid fa-shield-halved text-[#004591] text-xl"></i>
-                                    <span class="text-[9px] font-bold uppercase tracking-widest leading-tight">Clinical
-                                        Data<br>ConfidentialITY</span>
+                                    <span class="text-[9px] font-bold uppercase tracking-widest leading-tight">Smart
+                                        System<br>Active</span>
+                                    <div
+                                        class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 bg-gray-900 text-white text-[10px] p-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none line-clamp-3">
+                                        Double booking prevention & instant SMS connected.</div>
                                 </div>
                             </div>
                         </form>
@@ -1110,11 +1352,15 @@
                 <!-- Navigation Links -->
                 <div class="md:col-span-4">
                     <div
-                        class="flex flex-wrap justify-center gap-x-10 gap-y-4 text-[10px] tracking-[0.2em] text-white/50 uppercase font-bold">
-                        <a href="#about" class="hover:text-[#ea741b] transition-colors">History</a>
-                        <a href="#specialists" class="hover:text-[#ea741b] transition-colors">Specialists</a>
+                        class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] tracking-[0.2em] text-white/50 uppercase font-bold">
+                        <a href="#" class="hover:text-[#ea741b] transition-colors">Home</a>
+                        <a href="#about" class="hover:text-[#ea741b] transition-colors">About</a>
+                        <a href="#specialists" class="hover:text-[#ea741b] transition-colors">Doctors</a>
                         <a href="#services" class="hover:text-[#ea741b] transition-colors">Services</a>
-                        <a href="#contact" class="hover:text-[#ea741b] transition-colors">Appointment</a>
+                        <a href="#portal" class="hover:text-[#ea741b] transition-colors">Portal</a>
+                        <a href="#gallery" class="hover:text-[#ea741b] transition-colors">Gallery</a>
+                        <a href="#blog" class="hover:text-[#ea741b] transition-colors">Blog</a>
+                        <a href="#contact" class="hover:text-[#ea741b] transition-colors">Contact</a>
                     </div>
                 </div>
 
@@ -1191,6 +1437,128 @@
             });
         }, { threshold: 0.08 });
         revealEls.forEach(el => observer.observe(el));
+
+        // --- SMART BOOKING LOGIC ---
+        // Set minimum date to today
+        const dateInput = document.getElementById('booking-date');
+        const today = new Date().toISOString().split('T')[0];
+        if (dateInput) {
+            dateInput.setAttribute('min', today);
+            dateInput.value = today;
+        }
+
+        const timeSlots = ["4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM", "7:00 PM", "7:30 PM", "8:00 PM", "8:30 PM"];
+        let currentAvailableIndices = [];
+
+        function generateSlots() {
+            const container = document.getElementById('slots-container');
+            const doctorSelected = document.querySelector('input[name="doctor"]:checked');
+            const dateVal = document.getElementById('booking-date').value;
+
+            // Reset selected slot
+            document.getElementById('selected-slot').value = '';
+
+            if (!doctorSelected || !dateVal) {
+                container.innerHTML = '<p class="col-span-full text-center text-xs text-[#7c7c7c] py-4 italic">Please select a doctor and date first.</p>';
+                return;
+            }
+
+            // Generate "smart" pseudo-random availability based on date and doctor to simulate booking system
+            // Use a simple hash to keep it consistent for the same inputs
+            const hash = dateVal.charCodeAt(dateVal.length - 1) + (doctorSelected.value === 'male' ? 10 : 20);
+
+            container.innerHTML = '';
+            currentAvailableIndices = [];
+
+            timeSlots.forEach((time, index) => {
+                // Simulate some slots being booked (e.g., hash decides logic)
+                const isBooked = (hash + index) % 3 === 0;
+
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `w-full py-2 px-1 text-xs font-semibold rounded-lg border-2 transition-all ${isBooked ? 'bg-gray-100 border-gray-100 text-gray-400 cursor-not-allowed line-through' : 'border-[#004591]/20 text-[#004591] hover:border-[#ea741b] hover:text-[#ea741b] available-slot cursor-pointer'}`;
+                btn.innerText = time;
+                btn.dataset.index = index;
+
+                if (!isBooked) {
+                    currentAvailableIndices.push(index);
+                    btn.onclick = () => selectSlot(btn, time);
+                }
+
+                container.appendChild(btn);
+            });
+
+            if (currentAvailableIndices.length === 0) {
+                container.innerHTML = '<p class="col-span-full text-center text-xs text-red-500 py-4 font-bold">Sorry, fully booked for this date.</p>';
+            }
+        }
+
+        function selectSlot(clickedBtn, time) {
+            // Deselect others
+            const allBtns = document.querySelectorAll('#slots-container button');
+            allBtns.forEach(b => {
+                if (!b.classList.contains('cursor-not-allowed')) {
+                    b.classList.remove('bg-[#ea741b]', 'text-white', 'border-[#ea741b]', 'shadow-md');
+                    b.classList.add('border-[#004591]/20', 'text-[#004591]');
+                }
+            });
+
+            // Select active
+            clickedBtn.classList.remove('border-[#004591]/20', 'text-[#004591]', 'hover:border-[#ea741b]', 'hover:text-[#ea741b]');
+            clickedBtn.classList.add('bg-[#ea741b]', 'text-white', 'border-[#ea741b]', 'shadow-md');
+
+            document.getElementById('selected-slot').value = time;
+        }
+
+        function selectNextAvailable() {
+            const doctorSelected = document.querySelector('input[name="doctor"]:checked');
+            if (!doctorSelected) {
+                alert("Please select a specialist first.");
+                return;
+            }
+            if (currentAvailableIndices.length > 0) {
+                // Find the first available button and click it
+                const firstAvailableIndex = currentAvailableIndices[0];
+                const btn = document.querySelector(`#slots-container button[data-index="${firstAvailableIndex}"]`);
+                if (btn) btn.click();
+            } else {
+                alert("No available slots for the selected date. Please try another date.");
+            }
+        }
+
+        function resetSlots() {
+            document.getElementById('slots-container').innerHTML = '<p class="col-span-full text-center text-xs text-[#7c7c7c] py-4 italic">Please select a doctor and date first.</p>';
+            document.getElementById('selected-slot').value = '';
+        }
+
+        // Form Submit Simulation
+        document.getElementById('booking-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const slotVal = document.getElementById('selected-slot').value;
+            if (!slotVal) {
+                alert("Please select an available time slot before confirming.");
+                return;
+            }
+
+            // Simulate form submission and API call
+            const btn = document.getElementById('submit-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                // Success
+                document.getElementById('booking-form').classList.add('hidden');
+                document.getElementById('booking-success').classList.remove('hidden');
+
+                // Reset button internally for next time
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 1000);
+        });
+
+        // Initialize empty state
+        resetSlots();
     </script>
 
 </body>
